@@ -55,42 +55,41 @@
             this.groupBox1.Controls.Add(this.numericBathroom);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.numericRoom);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(244, 205);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 27);
+            this.label4.Location = new System.Drawing.Point(41, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 26;
-            this.label4.Text = "titlleCategoty;";
+            this.label4.Text = "Категория:";
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(112, 27);
+            this.txtTitle.Location = new System.Drawing.Point(112, 24);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(100, 20);
+            this.txtTitle.Size = new System.Drawing.Size(120, 20);
             this.txtTitle.TabIndex = 25;
             this.txtTitle.Text = "Супер-Люкс";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 172);
+            this.label3.Location = new System.Drawing.Point(41, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "price per day:";
+            this.label3.Text = "Стоимость/сутки:";
             // 
             // numericPrice
             // 
-            this.numericPrice.Location = new System.Drawing.Point(119, 170);
+            this.numericPrice.Location = new System.Drawing.Point(145, 140);
             this.numericPrice.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -113,15 +112,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 136);
+            this.label2.Location = new System.Drawing.Point(15, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(124, 13);
             this.label2.TabIndex = 21;
-            this.label2.Text = "bedCount:";
+            this.label2.Text = "Кол-во спальных мест:";
             // 
             // numericBed
             // 
-            this.numericBed.Location = new System.Drawing.Point(119, 134);
+            this.numericBed.Location = new System.Drawing.Point(145, 111);
             this.numericBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -144,15 +143,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 100);
+            this.label1.Location = new System.Drawing.Point(15, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(124, 13);
             this.label1.TabIndex = 19;
-            this.label1.Text = "bathroomCount:";
+            this.label1.Text = "Кол-во ванных комнат:";
             // 
             // numericBathroom
             // 
-            this.numericBathroom.Location = new System.Drawing.Point(119, 98);
+            this.numericBathroom.Location = new System.Drawing.Point(145, 84);
             this.numericBathroom.Maximum = new decimal(new int[] {
             10,
             0,
@@ -175,15 +174,15 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 65);
+            this.label12.Location = new System.Drawing.Point(55, 60);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.Size = new System.Drawing.Size(84, 13);
             this.label12.TabIndex = 18;
-            this.label12.Text = "RoomCount";
+            this.label12.Text = "Кол-во комнат:";
             // 
             // numericRoom
             // 
-            this.numericRoom.Location = new System.Drawing.Point(119, 63);
+            this.numericRoom.Location = new System.Drawing.Point(145, 58);
             this.numericRoom.Maximum = new decimal(new int[] {
             10,
             0,
@@ -209,17 +208,17 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(214, 59);
             this.btnBack.TabIndex = 15;
-            this.btnBack.Text = "back";
+            this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(30, 235);
+            this.btnAdd.Location = new System.Drawing.Point(30, 224);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(214, 59);
             this.btnAdd.TabIndex = 14;
-            this.btnAdd.Text = "add";
+            this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -231,9 +230,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAdd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "formAddAppart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formAddAppart";
+            this.Text = "Добавление апартаментов";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericPrice)).EndInit();

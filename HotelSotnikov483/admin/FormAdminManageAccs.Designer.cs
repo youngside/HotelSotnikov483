@@ -54,7 +54,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(444, 425);
+            this.btn_Close.Location = new System.Drawing.Point(433, 342);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(188, 57);
             this.btn_Close.TabIndex = 1;
@@ -64,21 +64,21 @@
             // 
             // txtb_Login
             // 
-            this.txtb_Login.Location = new System.Drawing.Point(444, 286);
+            this.txtb_Login.Location = new System.Drawing.Point(433, 203);
             this.txtb_Login.Name = "txtb_Login";
             this.txtb_Login.Size = new System.Drawing.Size(188, 20);
             this.txtb_Login.TabIndex = 2;
             // 
             // txtb_Passwd
             // 
-            this.txtb_Passwd.Location = new System.Drawing.Point(444, 336);
+            this.txtb_Passwd.Location = new System.Drawing.Point(433, 253);
             this.txtb_Passwd.Name = "txtb_Passwd";
             this.txtb_Passwd.Size = new System.Drawing.Size(188, 20);
             this.txtb_Passwd.TabIndex = 3;
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(444, 362);
+            this.btn_Add.Location = new System.Drawing.Point(433, 279);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(188, 57);
             this.btn_Add.TabIndex = 4;
@@ -91,7 +91,7 @@
             this.oic_Logo.Image = global::HotelSotnikov483.Properties.Resources.kisspng_hotel_icon_5_star_computer_icons_5ae44565d93681_6717417515249094138897;
             this.oic_Logo.Location = new System.Drawing.Point(433, 7);
             this.oic_Logo.Name = "oic_Logo";
-            this.oic_Logo.Size = new System.Drawing.Size(188, 149);
+            this.oic_Logo.Size = new System.Drawing.Size(188, 165);
             this.oic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oic_Logo.TabIndex = 5;
             this.oic_Logo.TabStop = false;
@@ -99,7 +99,7 @@
             // lb_Login
             // 
             this.lb_Login.AutoSize = true;
-            this.lb_Login.Location = new System.Drawing.Point(518, 264);
+            this.lb_Login.Location = new System.Drawing.Point(507, 181);
             this.lb_Login.Name = "lb_Login";
             this.lb_Login.Size = new System.Drawing.Size(38, 13);
             this.lb_Login.TabIndex = 6;
@@ -108,7 +108,7 @@
             // lb_Passwd
             // 
             this.lb_Passwd.AutoSize = true;
-            this.lb_Passwd.Location = new System.Drawing.Point(518, 320);
+            this.lb_Passwd.Location = new System.Drawing.Point(507, 237);
             this.lb_Passwd.Name = "lb_Passwd";
             this.lb_Passwd.Size = new System.Drawing.Size(45, 13);
             this.lb_Passwd.TabIndex = 7;
@@ -116,27 +116,27 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(12, 424);
+            this.btnDelete.Location = new System.Drawing.Point(85, 418);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(188, 57);
+            this.btnDelete.Size = new System.Drawing.Size(210, 57);
             this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "delete";
+            this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 400);
+            this.label1.Location = new System.Drawing.Point(82, 394);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "idUser:";
+            this.label1.Text = "Аккаунт номер:";
             // 
             // comboUsers
             // 
             this.comboUsers.FormattingEnabled = true;
-            this.comboUsers.Location = new System.Drawing.Point(79, 397);
+            this.comboUsers.Location = new System.Drawing.Point(174, 391);
             this.comboUsers.Name = "comboUsers";
             this.comboUsers.Size = new System.Drawing.Size(121, 21);
             this.comboUsers.TabIndex = 11;
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 496);
+            this.ClientSize = new System.Drawing.Size(643, 483);
             this.Controls.Add(this.comboUsers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
@@ -157,9 +157,10 @@
             this.Controls.Add(this.txtb_Login);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.dataGridViewAccounts);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAdminManageAccs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdminManageAccs";
+            this.Text = "Редактирование аккантов";
             this.Load += new System.EventHandler(this.FormAdminManageAccs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oic_Logo)).EndInit();

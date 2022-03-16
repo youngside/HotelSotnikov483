@@ -46,7 +46,8 @@ namespace HotelSotnikov483
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnShowHistory_Click(object sender, EventArgs e) {
+        private void btnShowHistory_Click(object sender, EventArgs e)
+        {
             FormAdminHistory form = new FormAdminHistory();
             this.Hide();
             form.ShowDialog();
@@ -58,7 +59,8 @@ namespace HotelSotnikov483
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAddNewAppart_Click(object sender, EventArgs e) {
+        private void btnAddNewAppart_Click(object sender, EventArgs e)
+        {
             formAddAppart form = new formAddAppart();
             this.Hide();
             form.ShowDialog();

@@ -43,9 +43,9 @@
             // 
             this.lb_Login.AutoSize = true;
             this.lb_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_Login.Location = new System.Drawing.Point(38, 202);
+            this.lb_Login.Location = new System.Drawing.Point(13, 202);
             this.lb_Login.Name = "lb_Login";
-            this.lb_Login.Size = new System.Drawing.Size(47, 16);
+            this.lb_Login.Size = new System.Drawing.Size(46, 16);
             this.lb_Login.TabIndex = 0;
             this.lb_Login.Text = "Логин";
             // 
@@ -53,16 +53,16 @@
             // 
             this.lb_Passwd.AutoSize = true;
             this.lb_Passwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_Passwd.Location = new System.Drawing.Point(32, 251);
+            this.lb_Passwd.Location = new System.Drawing.Point(7, 251);
             this.lb_Passwd.Name = "lb_Passwd";
-            this.lb_Passwd.Size = new System.Drawing.Size(57, 16);
+            this.lb_Passwd.Size = new System.Drawing.Size(56, 16);
             this.lb_Passwd.TabIndex = 1;
             this.lb_Passwd.Text = "Пароль";
             // 
             // txtbox_Login
             // 
             this.txtbox_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbox_Login.Location = new System.Drawing.Point(93, 196);
+            this.txtbox_Login.Location = new System.Drawing.Point(68, 196);
             this.txtbox_Login.Multiline = true;
             this.txtbox_Login.Name = "txtbox_Login";
             this.txtbox_Login.Size = new System.Drawing.Size(175, 30);
@@ -73,7 +73,7 @@
             // txtbox_Passwd
             // 
             this.txtbox_Passwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbox_Passwd.Location = new System.Drawing.Point(93, 246);
+            this.txtbox_Passwd.Location = new System.Drawing.Point(68, 246);
             this.txtbox_Passwd.Multiline = true;
             this.txtbox_Passwd.Name = "txtbox_Passwd";
             this.txtbox_Passwd.Size = new System.Drawing.Size(175, 30);
@@ -83,7 +83,7 @@
             // 
             // btnAuth
             // 
-            this.btnAuth.Location = new System.Drawing.Point(93, 296);
+            this.btnAuth.Location = new System.Drawing.Point(68, 296);
             this.btnAuth.Name = "btnAuth";
             this.btnAuth.Size = new System.Drawing.Size(175, 56);
             this.btnAuth.TabIndex = 4;
@@ -94,7 +94,7 @@
             // pic_ShowPasswd
             // 
             this.pic_ShowPasswd.Image = global::HotelSotnikov483.Properties.Resources._481_4810872_hide_password_hide_show_password_icon_png_transparent;
-            this.pic_ShowPasswd.Location = new System.Drawing.Point(274, 246);
+            this.pic_ShowPasswd.Location = new System.Drawing.Point(249, 246);
             this.pic_ShowPasswd.Name = "pic_ShowPasswd";
             this.pic_ShowPasswd.Size = new System.Drawing.Size(30, 30);
             this.pic_ShowPasswd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,7 +105,7 @@
             // pic_Logo
             // 
             this.pic_Logo.Image = global::HotelSotnikov483.Properties.Resources.kisspng_hotel_icon_5_star_computer_icons_5ae44565d93681_6717417515249094138897;
-            this.pic_Logo.Location = new System.Drawing.Point(93, 12);
+            this.pic_Logo.Location = new System.Drawing.Point(68, 12);
             this.pic_Logo.Name = "pic_Logo";
             this.pic_Logo.Size = new System.Drawing.Size(175, 168);
             this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 390);
+            this.ClientSize = new System.Drawing.Size(293, 360);
             this.Controls.Add(this.pic_ShowPasswd);
             this.Controls.Add(this.pic_Logo);
             this.Controls.Add(this.btnAuth);

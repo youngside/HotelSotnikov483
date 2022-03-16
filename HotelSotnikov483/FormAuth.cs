@@ -16,7 +16,8 @@ namespace HotelSotnikov483
         SotnikovHotelDataSetTableAdapters.HistoryTableAdapter history = new SotnikovHotelDataSetTableAdapters.HistoryTableAdapter();
 
         bool visible_pass = false;
-        public FormAuthorization() {
+        public FormAuthorization()
+        {
             MaximizeBox = false;
             InitializeComponent();
         }
@@ -49,20 +50,22 @@ namespace HotelSotnikov483
         {
             string log, pas;
             pas = this.txtbox_Login.Text;
-            log = this.txtbox_Passwd.Text;			//Исходные данные
-            
+            log = this.txtbox_Passwd.Text;          //Исходные данные
+
             DateTime dt = DateTime.Now;			//Дата для истории
             string timeString = dt.ToLongTimeString();
 
             //Наложить на все записи фильтр на совпадение по логину и паролю
             var filter = users.GetData().Where(rec => rec.Login == log && rec.Password == pas);
-            if (filter.Count() == 0) {
+            if (filter.Count() == 0)
+            {
                 MessageBox.Show("Таких данных нет.");
 
                 //add new line to historyTable
                 history.InsertQuery(Total.idUser, false, DateTime.Now);
             }
-            else {
+            else
+            {
 
                 Total.idUser = filter.ElementAt(0).idUser;
                 Total.idRole = filter.ElementAt(0).idRole;
@@ -94,5 +97,5 @@ namespace HotelSotnikov483
             }
         }
     }
-    
+
 }

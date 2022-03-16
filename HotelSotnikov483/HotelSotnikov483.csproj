@@ -59,11 +59,11 @@
     <Compile Include="admin\FormAdminHistory.Designer.cs">
       <DependentUpon>FormAdminHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAuth.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAuth.Designer.cs">
+      <DependentUpon>FormAuth.cs</DependentUpon>
     </Compile>
     <Compile Include="admin\FormAdmin.cs">
       <SubType>Form</SubType>
@@ -103,8 +103,8 @@
     <EmbeddedResource Include="admin\FormAdminHistory.resx">
       <DependentUpon>FormAdminHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormAuth.resx">
+      <DependentUpon>FormAuth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>

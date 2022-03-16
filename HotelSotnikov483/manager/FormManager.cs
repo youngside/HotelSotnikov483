@@ -24,7 +24,7 @@ namespace HotelSotnikov483
         SotnikovHotelDataSetTableAdapters.AppartsCategoryTableAdapter apparts = new SotnikovHotelDataSetTableAdapters.AppartsCategoryTableAdapter();
         SotnikovHotelDataSetTableAdapters.ClientsTableAdapter clients = new SotnikovHotelDataSetTableAdapters.ClientsTableAdapter();
         SotnikovHotelDataSetTableAdapters.BookingTableAdapter booking = new SotnikovHotelDataSetTableAdapters.BookingTableAdapter();
-        
+
 
         /// <summary>
         /// close form
@@ -41,18 +41,20 @@ namespace HotelSotnikov483
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FormManager_Load(object sender, EventArgs e) {
+        private void FormManager_Load(object sender, EventArgs e)
+        {
             comboApparts.DisplayMember = "TitleCategory";
             comboApparts.ValueMember = "idCategory";
             comboApparts.DataSource = apparts.GetData();
         }
-        
+
         /// <summary>
         /// fill info about appart
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void comboApparts_SelectedIndexChanged(object sender, EventArgs e) {
+        private void comboApparts_SelectedIndexChanged(object sender, EventArgs e)
+        {
             int idCategory = (int)comboApparts.SelectedValue;
             var filter = apparts.GetData().Where(x => x.idCategory == idCategory);
 
@@ -72,7 +74,8 @@ namespace HotelSotnikov483
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btShowBooking_Click(object sender, EventArgs e) {
+        private void btShowBooking_Click(object sender, EventArgs e)
+        {
             formAllBooking form = new formAllBooking();
             this.Hide();
             form.ShowDialog();
@@ -84,7 +87,8 @@ namespace HotelSotnikov483
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnReg_Click(object sender, EventArgs e) {
+        private void btnReg_Click(object sender, EventArgs e)
+        {
             string firstname = txtFirstname.Text;
             string lastname = txtLastname.Text;
             string patronymic = txtPatron.Text;
@@ -93,7 +97,7 @@ namespace HotelSotnikov483
 
             //add client
             clients.InsertQuery(lastname, firstname, patronymic, date.ToString());
-           
+
             //add new booking
             int idClient = clients.GetData().Where(x => x.Surname == lastname && x.Name == firstname && x.Patronomic == patronymic).ElementAt(0).idClient;
             int idCategory = (int)comboApparts.SelectedValue;
@@ -108,11 +112,11 @@ namespace HotelSotnikov483
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void numericCountOfDays_ValueChanged(object sender, EventArgs e) {
+        private void numericCountOfDays_ValueChanged(object sender, EventArgs e)
+        {
             //change total price
             totalPrice = price * (int)numericCountOfDays.Value;
             labelPrice.Text = "Total price: " + totalPrice;
-
         }
     }
 }

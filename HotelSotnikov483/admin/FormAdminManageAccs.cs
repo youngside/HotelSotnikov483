@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-namespace HotelSotnikov483 {
-    public partial class FormAdminManageAccs : Form {
+namespace HotelSotnikov483
+{
+    public partial class FormAdminManageAccs : Form
+    {
         SotnikovHotelDataSetTableAdapters.UsersTableAdapter useradapter = new SotnikovHotelDataSetTableAdapters.UsersTableAdapter();
         SotnikovHotelDataSet.UsersDataTable dataUser;
 
-        public FormAdminManageAccs() {
+        public FormAdminManageAccs()
+        {
             InitializeComponent();
         }
         /// <summary>
@@ -22,7 +25,8 @@ namespace HotelSotnikov483 {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FormAdminManageAccs_Load(object sender, EventArgs e) {
+        private void FormAdminManageAccs_Load(object sender, EventArgs e)
+        {
             //Получение всех записей из таблицы Users
             dataUser = this.useradapter.GetData();
             //Отбор только с ролью бегун (1) и спонсор (2)
@@ -32,7 +36,7 @@ namespace HotelSotnikov483 {
             //Отобразить полученные записи в компоненте
             this.dataGridViewAccounts.DataSource = filter.CopyToDataTable();
             //Выделять всю строку
-            
+
             dataGridViewAccounts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAccounts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAccounts.Select();     //Выбрать первую строку    
@@ -48,24 +52,29 @@ namespace HotelSotnikov483 {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_Add_Click(object sender, EventArgs e) {
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
             string log = txtb_Login.Text;
             string pas = txtb_Passwd.Text;
 
             //Контроль корректности заполнения полей
-            if (String.IsNullOrEmpty(log) || String.IsNullOrEmpty(pas)) {
+            if (String.IsNullOrEmpty(log) || String.IsNullOrEmpty(pas))
+            {
                 MessageBox.Show("Заполните все поля");
                 return;
             }
-            if (txtb_Passwd.Text.Length < 6) {
+            if (txtb_Passwd.Text.Length < 6)
+            {
                 MessageBox.Show("Пароль меньше 6 символов");
                 return;
             }
-            if (Regex.IsMatch(log, "^[А-Яа-я]+$")) {
+            if (Regex.IsMatch(log, "^[А-Яа-я]+$"))
+            {
                 MessageBox.Show("В логине есть русские символы");
                 return;
             }
-            if (Regex.IsMatch(pas, "^[А-Яа-я]+$")) {
+            if (Regex.IsMatch(pas, "^[А-Яа-я]+$"))
+            {
                 MessageBox.Show("В пароле есть русские символы");
                 return;
             }
@@ -74,17 +83,21 @@ namespace HotelSotnikov483 {
             var filter = dataUser.Where(rec => rec.Login == log);
             if (filter.Count() == 0)	//Нет записей – совпадение логина не найдено
             {
-                try {
+                try
+                {
                     //default idRole = 2
                     useradapter.Insert(2, log, pas);
                     MessageBox.Show("Данные о новом пользователе успешно сохранены в БД");
                     FormAdminManageAccs_Load(null, null);		//Обновить данные в таблице
-                } catch {
+                }
+                catch
+                {
                     MessageBox.Show("При добавлении нового пользователя возникли проблемы");
                     return;
                 }
-            } else
-              {
+            }
+            else
+            {
                 MessageBox.Show("Такой пользователь уже зарегистрирован в системе." +
                                                     Environment.NewLine + " Введите другие данные");
                 return;
@@ -96,7 +109,8 @@ namespace HotelSotnikov483 {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_Close_Click(object sender, EventArgs e) {
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
@@ -105,7 +119,8 @@ namespace HotelSotnikov483 {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnDelete_Click(object sender, EventArgs e) {
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
             int idUser = (int)comboUsers.SelectedValue;
             useradapter.DeleteQuery(idUser);
 

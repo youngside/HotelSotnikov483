@@ -38,7 +38,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(30, 467);
+            this.btn_Close.Location = new System.Drawing.Point(30, 443);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(214, 53);
             this.btn_Close.TabIndex = 0;
@@ -72,17 +72,17 @@
             this.btnShowHistory.Name = "btnShowHistory";
             this.btnShowHistory.Size = new System.Drawing.Size(214, 59);
             this.btnShowHistory.TabIndex = 7;
-            this.btnShowHistory.Text = "show history";
+            this.btnShowHistory.Text = "История входов";
             this.btnShowHistory.UseVisualStyleBackColor = true;
             this.btnShowHistory.Click += new System.EventHandler(this.btnShowHistory_Click);
             // 
             // btnAddNewAppart
             // 
-            this.btnAddNewAppart.Location = new System.Drawing.Point(30, 378);
+            this.btnAddNewAppart.Location = new System.Drawing.Point(30, 368);
             this.btnAddNewAppart.Name = "btnAddNewAppart";
             this.btnAddNewAppart.Size = new System.Drawing.Size(214, 59);
             this.btnAddNewAppart.TabIndex = 8;
-            this.btnAddNewAppart.Text = "add new appart";
+            this.btnAddNewAppart.Text = "Добавить апартаменты";
             this.btnAddNewAppart.UseVisualStyleBackColor = true;
             this.btnAddNewAppart.Click += new System.EventHandler(this.btnAddNewAppart_Click);
             // 
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 532);
+            this.ClientSize = new System.Drawing.Size(282, 505);
             this.Controls.Add(this.btnAddNewAppart);
             this.Controls.Add(this.btnShowHistory);
             this.Controls.Add(this.pic_Logo);
@@ -99,7 +99,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin";
+            this.Text = "Администратор";
             ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).EndInit();
             this.ResumeLayout(false);
 

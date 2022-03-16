@@ -8,9 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelSotnikov483.admin {
-    public partial class FormAdminHistory : Form {
-        public FormAdminHistory() {
+namespace HotelSotnikov483.admin
+{
+    public partial class FormAdminHistory : Form
+    {
+        public FormAdminHistory()
+        {
             InitializeComponent();
         }
         SotnikovHotelDataSetTableAdapters.HistoryTableAdapter history = new SotnikovHotelDataSetTableAdapters.HistoryTableAdapter();
@@ -21,7 +24,8 @@ namespace HotelSotnikov483.admin {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnBack_Click(object sender, EventArgs e) {
+        private void btnBack_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
@@ -30,7 +34,8 @@ namespace HotelSotnikov483.admin {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FormAdminHistory_Load(object sender, EventArgs e) {
+        private void FormAdminHistory_Load(object sender, EventArgs e)
+        {
             dataGridHistory.DataSource = history.GetData();
             dataGridHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }

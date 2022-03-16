@@ -42,7 +42,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(212, 59);
             this.btnBack.TabIndex = 15;
-            this.btnBack.Text = "back";
+            this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -53,9 +53,10 @@
             this.ClientSize = new System.Drawing.Size(428, 418);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridHistory);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAdminHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdminHistory";
+            this.Text = "История входов";
             this.Load += new System.EventHandler(this.FormAdminHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHistory)).EndInit();
             this.ResumeLayout(false);
